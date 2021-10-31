@@ -1,0 +1,29 @@
+body {
+    width: 300px;
+    height: 290px;
+    background-color:rgb(58, 58, 58);
+    color: aliceblue;
+    font-weight: bold;
+    font-family: "Nunito",sans-serif;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2,p{
+    text-align:center
+}
+
+input[type="submit"]
+{
+    font-weight:bold;
+    background: #ffffff;
+}
+
+.submit:hover{
+    background:#272626;
+    color: white;
+}
