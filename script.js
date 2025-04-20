@@ -17,6 +17,17 @@ function isValidIP(ip) {
     return ipv4.test(ip) || ipv6.test(ip);
 }
 
+function clearIPInfo() {
+    ip.innerHTML = "";
+    city.innerHTML = "";
+    hostname.innerHTML = "";
+    region.innerHTML = "";
+    coords.innerHTML = "";
+    org.innerHTML = "";
+    pin.innerHTML = "";
+    timezone.innerHTML = "";
+}
+
 // Function to fetch and display IP info
 function fetchIPInfo(targetIP) {
     ip.innerHTML = "Fetching IP Address Information...";
@@ -49,6 +60,7 @@ button.addEventListener('click', () => {
     if (isValidIP(userInput)) {
         fetchIPInfo(userInput);
     } else {
+        clearIPInfo();  // Clear previous data
         ip.innerHTML = "Invalid IP address format!";
     }
 });
